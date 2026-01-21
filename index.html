@@ -18,6 +18,7 @@
         }
       });
     </script>
+    <script src="put-snowman.js"></script>
   </head>
   <body>
     <a-scene
@@ -25,8 +26,7 @@
       ar-hit-test="target: #objects;"
       renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
       shadow="type: pcfsoft"
-      xr-mode-ui="XRMode: xr"
-    >
+      xr-mode-ui="XRMode: ar">
       <a-light type="directional" light="castShadow:true;" position="1 1 1" intensity="1.57" shadow-camera-automatic="#objects"></a-light>
       <a-camera position="0 0.4 0" wasd-controls="acceleration:10;"></a-camera>
       <a-entity id="objects" scale="0.2 0.2 0.2" position="0 0 -1" shadow>
@@ -34,7 +34,8 @@
         <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
         <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       </a-entity>
-      <a-plane follow-shadow="#objects" material="shader:shadow" shadow="cast:false;" rotation="-90 0 0" width="2" height="2"></a-plane>
+      <a-plane follow-shadow="#objects" material="shader:shadow" shadow="cast:false;" 
+               rotation="-90 0 0" width="2" height="2" put-snowman></a-plane>
       <a-sky color="#ECECEC" hide-on-enter-ar></a-sky>
     </a-scene>
   </body>
