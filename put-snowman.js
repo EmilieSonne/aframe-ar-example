@@ -3,6 +3,8 @@ AFRAME.registerComponent('put-snowman', {
         let el = this.el; 
 
         this.addSnowman = function(e){
+            debugger; 
+
             let p = e.detail.intersection.point;
             console.log(p);
             let r = 0.5; 
@@ -20,6 +22,7 @@ AFRAME.registerComponent('put-snowman', {
             snowman.setAttribute('radius', r)
             snowman.setAttribute('scale', '0.2 0.2 0.2');
             p.y += r;
+            console.log(p);
             snowman.setAttribute('position', p);
             snowman.setAttribute('shadow', {});
             //snowman.appendChild(bottomball);
