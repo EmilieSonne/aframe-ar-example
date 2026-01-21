@@ -5,7 +5,7 @@ AFRAME.registerComponent('put-snowman', {
 
         this.addSnowman = function(e){
             debugger;
-            print(e);
+            console.log(e);
             debugger;
         }
 
