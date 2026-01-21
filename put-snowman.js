@@ -8,19 +8,19 @@ AFRAME.registerComponent('put-snowman', {
             let p = e.detail.intersection.point;
             let scene = document.querySelector('a-scene');
             let snowman = document.createElement('a-entity');
-            let bottomball = document.createElement('a-sphere');
+            //let bottomball = document.createElement('a-sphere');
 
-            bottomball.setAttribute('position', p);
-            bottomball.setAttribute('radius', '1.25');
-            bottomball.setAttribute('material', 'color: white');
+            //bottomball.setAttribute('position', p);
+            //bottomball.setAttribute('radius', '1.25');
+            //bottomball.setAttribute('material', 'color: white');
 
 
-            //snowman.setAttribute('geometry', 'primitive: sphere');
-            //snowman.setAttribute('material', 'color: white');
-            //snowman.setAttribute('scale', '1 1 1')
-            //snowman.setAttribute('position', p);
+            snowman.setAttribute('geometry', 'primitive: sphere');
+            snowman.setAttribute('material', 'color: white');
+            snowman.setAttribute('scale', '1 1 1')
+            snowman.setAttribute('position', p);
             snowman.setAttribute('shadow', {});
-            snowman.appendChild(bottomball);
+            //snowman.appendChild(bottomball);
 
             scene.appendChild(snowman);
         }
