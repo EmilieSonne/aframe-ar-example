@@ -26,7 +26,23 @@ AFRAME.registerComponent('put-snowman', {
             scene.appendChild(snowman_top);
         }
 
-        this.el.addEventListener('click', this.addSnowman);
+        this.addPinetree = function(e){
+            let p = e.detail.intersection.point;
+            console.log(p);
+            let scene = document.querySelector('a-scene');
+            let pinetree = document.createElement('a-entity');
+            pinetree.setAttribute('geometry', 'primitive: cone');
+            pinetree.setAttribute('material', 'color: green');
+            pinetree.setAttribute('scale', '0.2 0.2 0.2');
+            pinetree.setAttribute('position', p);
+            pinetree.setAttribute('shadow', {});
+
+            scene.appendChild(pinetree);
+        }
+
+
+
+        this.el.addEventListener('click', this.addPinetree);
     }
 
 })
