@@ -9,10 +9,10 @@ AFRAME.registerComponent('put-snowman', {
             let scene = document.querySelector('a-scene');
             let snowman = document.createElement('a-entity');
             let bottomball = document.createElement('a-sphere');
-            // position="0 1.25 -1" radius="1.25" color="blue"
+
             bottomball.setAttribute('position', p);
             bottomball.setAttribute('radius', '1.25');
-            bottomball.setAttribute('color', 'white');
+            bottomball.setAttribute('material', 'color: white');
 
 
             //snowman.setAttribute('geometry', 'primitive: sphere');
@@ -21,7 +21,7 @@ AFRAME.registerComponent('put-snowman', {
             //snowman.setAttribute('position', p);
             snowman.setAttribute('shadow', {});
             snowman.appendChild(botttomball);
-            
+
             scene.appendChild(snowman);
         }
 
