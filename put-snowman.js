@@ -1,11 +1,10 @@
 AFRAME.registerComponent('put-snowman', {
     init: function(){
-        debugger;
         let el = this.el; 
 
         this.addSnowman = function(e){
-            debugger;
             let p = e.detail.intersection.point;
+            console.log(p);
             let r = 0.5; 
             let scene = document.querySelector('a-scene');
             let snowman = document.createElement('a-entity');
