@@ -17,8 +17,8 @@ AFRAME.registerComponent('put-snowman', {
             let snowman_top = document.createElement('a-entity');
             snowman_top.setAttribute('geometry', 'primitive: sphere');
             snowman_top.setAttribute('material', 'color: white');
-            snowman_top.setAttribute('scale', '0.1 0.1 0.1');
-            p.y += 0.2;
+            snowman_top.setAttribute('scale', '0.15 0.15 0.15');
+            p.y += 0.3;
             snowman_top.setAttribute('position', p);
             // snowman_top.setAttribute('shadow', {});
 
