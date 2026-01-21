@@ -20,7 +20,7 @@ AFRAME.registerComponent('put-snowman', {
             //snowman.setAttribute('scale', '1 1 1')
             //snowman.setAttribute('position', p);
             snowman.setAttribute('shadow', {});
-            snowman.appendChild(botttomball);
+            snowman.appendChild(bottomball);
 
             scene.appendChild(snowman);
         }
