@@ -6,6 +6,7 @@ AFRAME.registerComponent('put-snowman', {
         this.addSnowman = function(e){
             debugger;
             let p = e.detail.intersection.point;
+            let r = 0.5; 
             let scene = document.querySelector('a-scene');
             let snowman = document.createElement('a-entity');
             //let bottomball = document.createElement('a-sphere');
@@ -17,8 +18,9 @@ AFRAME.registerComponent('put-snowman', {
 
             snowman.setAttribute('geometry', 'primitive: sphere');
             snowman.setAttribute('material', 'color: white');
-            snowman.setAttribute('radius', '1.25')
-            p.y += 1.25;
+            snowman.setAttribute('radius', r)
+            snowman.setAttribute('scale', '0.2 0.2 0.2');
+            p.y += r;
             snowman.setAttribute('position', p);
             snowman.setAttribute('shadow', {});
             //snowman.appendChild(bottomball);
