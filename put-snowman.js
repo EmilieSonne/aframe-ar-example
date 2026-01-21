@@ -43,10 +43,10 @@ AFRAME.registerComponent('put-snowman', {
         this.addSnowmanOrPinetree = function(e){
             let x = Math.random();
             if (x < 0.7){
-                this.addPinetree(e);
+                addPinetree(e);
             }
             else {
-                this.addSnowman(e);
+                addSnowman(e);
             }
         }
 
