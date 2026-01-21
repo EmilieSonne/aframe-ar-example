@@ -1,33 +1,31 @@
 AFRAME.registerComponent('put-snowman', {
     init: function(){
+        debugger; 
         let el = this.el; 
 
         this.addSnowman = function(e){
-            debugger; 
-
             let p = e.detail.intersection.point;
             console.log(p);
-            let r = 0.5; 
             let scene = document.querySelector('a-scene');
             let snowman = document.createElement('a-entity');
-            //let bottomball = document.createElement('a-sphere');
-
-            //bottomball.setAttribute('position', p);
-            //bottomball.setAttribute('radius', '1.25');
-            //bottomball.setAttribute('material', 'color: white');
-
-
             snowman.setAttribute('geometry', 'primitive: sphere');
             snowman.setAttribute('material', 'color: white');
-            snowman.setAttribute('radius', r)
+            snowman.setAttribute('radius', '0.5')
             snowman.setAttribute('scale', '0.2 0.2 0.2');
-            p.y += r;
-            console.log(p);
             snowman.setAttribute('position', p);
             snowman.setAttribute('shadow', {});
-            //snowman.appendChild(bottomball);
+
+            let snowman_top = document.createElement('a-entity');
+            snowman_top.setAttribute('geometry', 'primitive: sphere');
+            snowman_top.setAttribute('material', 'color: white');
+            snowman_top.setAttribute('radius', 0.3)
+            snowman_top.setAttribute('scale', '0.2 0.2 0.2');
+            p.y += 0.5;
+            snowman_top.setAttribute('position', p);
+            snowman_top.setAttribute('shadow', {});
 
             scene.appendChild(snowman);
+            scene.appendChild(snowman_top);
         }
 
         this.el.addEventListener('click', this.addSnowman);
